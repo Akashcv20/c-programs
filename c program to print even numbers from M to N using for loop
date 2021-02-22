@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <conio.h>
+void printeven(int, int);
+int main()
+{
+    int m, i, n, p, q;
+    printf("Enter the range of numbers within which you want to print all the even numbers. First input M(lower limit) then, N(higher limit). \n");
+    scanf("%d %d", &m, &n);
+    if(m<n){
+        p=m;
+        q=n;
+    }
+    else{
+        q=m;
+        p=n;
+    }
+    printeven(p, q);
+    getch();
+    return 0;
+}
+void printeven(int a, int b)
+{
+    printf("The even numbers ranging from %d to %d are : ", a, b);
+    for(int i=a;i<=b;i++)
+    {
+        if (i % 2 == 0)
+        {
+            printf("%d , ", i);
+        }
+    }
+    return;
+}
